@@ -1,0 +1,20 @@
+do: init with this command $python -m Pyro4.naming
+
+Run
+save-server.py
+
+Run 
+Sensors
+
+sudo apt-get install python-jsonpickle
+                  | |
+                  | |
+                  | |
+                   V
+Python library for serializing any arbitrary object
+graph into JSON. It can take almost any Python object
+and turn the object into JSON. Additionally, it can
+reconstitute the object back into Python.
+
+http://jsonpickle.github.io/
+https://pypi.python.org/pypi/jsonpickle/0.4.0

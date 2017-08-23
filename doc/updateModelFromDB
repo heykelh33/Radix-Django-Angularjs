@@ -1,0 +1,7 @@
+Para actualizar  o crear el modelo partiendo de la DB
++ en caso de que model.py tenga algo borrarlo y luego:
+-->  python manage.py inspectdb // para ver que fue lo q se genero 
+--> python manage.py inspectdb > sensor/models.py
+
+ver
+https://docs.djangoproject.com/en/1.9/howto/legacy-databases/	

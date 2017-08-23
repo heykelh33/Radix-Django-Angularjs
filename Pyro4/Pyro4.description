@@ -1,0 +1,1 @@
+copiar el script Pyro4 a la carpeta /etc/init.d encargado de levantar el servicio de Pyro4, dpues se cambian los permisos a 755 y se pone como owner a root y al group a root. despues se configura para que se ejecute durante el arranque del RPi asi: sudo update-rc Pyro4 defaults
