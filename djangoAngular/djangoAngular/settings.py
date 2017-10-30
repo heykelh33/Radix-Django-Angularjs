@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'channels',
     'radix',
     'worker',
-    'sensors'                         #sensorWorker App
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -59,7 +58,7 @@ ROOT_URLCONF = 'djangoAngular.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,15 +147,15 @@ STATICFILES_DIRS = (
     ),
 )
 
-redis_host = os.environ.get('REDIS_HOST', 'localhost')
+
 
 CHANNEL_LAYERS = {
     "default": {
         # This example app uses the Redis channel layer implementation asgi_redis
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [(redis_host, 6379)],
+            "hosts": [('localhost',6379)],
         },
-        "ROUTING": "radix.routing.channel_routing",
+        "ROUTING": "djangoAngular.routing.channel_routing",
     },
 }
