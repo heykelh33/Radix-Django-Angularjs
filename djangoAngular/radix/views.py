@@ -10,6 +10,11 @@ def index(request):
     return render(request, 'radix/index.html')
 # **********************************************************************************************************************
 
+def sensor(request):
+    return render(request, 'radix/sensor.html')
+
+
+
 # Devuelve los ultimos n valores de una variable
 def last_data(request, typeId = 1, n = 1):
     # Filtrando los ultimos resultados (poner '-date_time' provoca orden descendente)
