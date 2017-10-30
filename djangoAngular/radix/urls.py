@@ -1,8 +1,7 @@
-__author__ = 'ramon-debian'
 
 # from django.conf.urls import patterns, url
 from django.conf.urls import include, url
-from radix import views
+from . import views
 
 # partial_patterns = patterns('',
 #     url(r'^contact.html$', PartialGroupView.as_view(template_name='contact.html'), name='contact'),
@@ -23,6 +22,7 @@ from radix import views
 urlpatterns = [
     # Para acceder al index de nuestros sensores
     url(r'^$', views.index, name='index'),
+    url(r'^sensor', views.sensor, name='sensor'),
     # views.index es para la funcion del controlador (view) y
     # name='index' para referenciar la URL desde la vista (template)
     
