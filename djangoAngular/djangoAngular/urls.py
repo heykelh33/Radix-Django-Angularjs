@@ -21,5 +21,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^radix/', include('radix.urls', namespace="radix")),
-    url(r'^sensors/', include('sensors.urls', namespace="sensors")),
+    #url(r'^sensors/', include('sensors.urls', namespace="sensors")),
 ]
