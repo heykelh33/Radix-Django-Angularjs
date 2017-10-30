@@ -6,9 +6,9 @@ def ws_connect(message):
     print("ws_connect consumer: Someone is connected.")
     path = message['path']                                                     # i.e. /radix/
     #print path
-    if path == b'/radix/':
+    if path == b'/sensor/':
         print("ws_connect consumer:Adding new user to sensor group")
-        Group("radix").add(message.reply_channel)                             # Adds user to group for broadcast
+        Group("sensor").add(message.reply_channel)                             # Adds user to group for broadcast
         message.reply_channel.send({                                            # Reply to individual directly
            "text": "You're connected to radix group...",
         })
@@ -24,5 +24,5 @@ def ws_message(message):
 
 def ws_disconnect(message):
     print("ws_disconnect consumer: Someone left us...")
-    Group("radix").discard(message.reply_channel)
+    Group("sensor").discard(message.reply_channel)
 
