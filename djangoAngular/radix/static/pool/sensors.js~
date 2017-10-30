@@ -19,5 +19,24 @@ $(function() {
       chatsock.onopen();
     }
 
-    
+    // var socket = new WebSocket('ws://' + window.location.host + '/sensor/');
+
+    // socket.onopen = function open() {
+    //   console.log('WebSockets connection created.');
+    // };
+
+    // socket.onmessage = function(message) {
+    //     console.log("Received Sock message!");
+    //     console.log(message);
+    //     $('#sensor').text(message.data);
+    // };
+
+    // if (socket.readyState == WebSocket.OPEN) {
+    //   socket.onopen();
+    // }
+
+
+
+
+
 });
