@@ -4,13 +4,13 @@ from channels import Group
 
 def ws_connect(message):
     print("ws_connect consumer: Someone is connected.")
-    path = message['path']                                                     # i.e. /sensor/
+    path = message['path']                                                     # i.e. /radix/
     #print path
     if path == b'/radix/':
         print("ws_connect consumer:Adding new user to sensor group")
-        Group("sensor").add(message.reply_channel)                             # Adds user to group for broadcast
+        Group("radix").add(message.reply_channel)                             # Adds user to group for broadcast
         message.reply_channel.send({                                            # Reply to individual directly
-           "text": "You're connected to sensor group...",
+           "text": "You're connected to radix group...",
         })
     else:
 		print("Strange connector!!")
@@ -24,5 +24,5 @@ def ws_message(message):
 
 def ws_disconnect(message):
     print("ws_disconnect consumer: Someone left us...")
-    Group("sensor").discard(message.reply_channel)
+    Group("radix").discard(message.reply_channel)
 
