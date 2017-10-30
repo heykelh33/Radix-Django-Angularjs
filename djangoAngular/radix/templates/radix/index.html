@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+
     {% verbatim %}
     
         <div class="padding10" style="height: 100%;">
@@ -25,7 +26,7 @@
                 </div>
                 <div class="content" style="height: 90%; overflow: auto;">
                     
-                    <div style="text-align: center; padding: 10px; font-size: 5rem;">
+                    <div id = "sensor" style="text-align: center; padding: 10px; font-size: 5rem;">
                         {{p.lastvalue}}
                     </div>
                             
@@ -132,3 +133,4 @@
 
     {% endverbatim %}
 {% endblock %}
+

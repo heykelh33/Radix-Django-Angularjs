@@ -1,0 +1,70 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Real Time Enviromental Monitoring Site">
+  <meta name="keywords" content="Django, Channels, Angularjs">
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/snapdots.css" %}" rel="stylesheet">
+</head>
+
+<body style="background:transparent url('% static images/bg.png' %) repeat scroll 0 0">
+  <header>
+    <h1>SnapDots-Real Time Environmental Monitoring</h1>
+  </header>
+    
+  <div id="content">
+    
+    <nav class="navbar navbar-default margintop" style="font-size: 12pt;">
+      <ul>
+        <li>logo</li>
+      </ul>
+    </nav>
+    
+    <section>
+      <blockquote>seccion número uno</blockquote>
+      <blockquote>seccion número dos</blockquote>
+      <div class="container">
+          <h2>Sensor Reading</h2>
+      </div>
+      <div class="sensors">
+      <p class="readings">
+        <strong>Values= {{sensor}} </strong>
+      </p>
+      </div>
+
+    </section>
+
+
+    <aside>
+      <blockquote>Mensaje número uno</blockquote>
+      <blockquote>Mensaje número dos</blockquote>
+      <ul>
+        <li>logo</li>
+        <li>fotos</li>
+        <li>videos</li>
+        <li>contacto</li>
+      </ul>
+    </aside>
+
+    <footer class="footer" style="font-size: 8pt;">
+      Derechos Reservados &copy; 2010-2011
+    </footer>
+
+
+
+
+
+    
+  
+
+
+  <script type= "text/javascript" src= "/static/js/jquery-1.12.1.min.js"></script>
+  <script type= "text/javascript" src= "/static/js/reconnecting-websocket.js"></script>
+  <script type= "text/javascript" src= "/static/js/sensors.js"></script>
+
+</body>
+
+</html>

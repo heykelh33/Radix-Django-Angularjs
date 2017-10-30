@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'radix'
+    'channels',
+    'radix',
+    'worker',
+    'sensors'                         #sensorWorker App
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -144,3 +147,16 @@ STATICFILES_DIRS = (
         'static',
     ),
 )
+
+redis_host = os.environ.get('REDIS_HOST', 'localhost')
+
+CHANNEL_LAYERS = {
+    "default": {
+        # This example app uses the Redis channel layer implementation asgi_redis
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(redis_host, 6379)],
+        },
+        "ROUTING": "radix.routing.channel_routing",
+    },
+}
