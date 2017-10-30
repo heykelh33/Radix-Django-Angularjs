@@ -1,4 +1,5 @@
-from channels import include
+from channels.routing import route
+from radix.consumers import ws_connect, ws_message, ws_disconnect
 
 
 # The channel routing defines what channels get handled by what consumers,
