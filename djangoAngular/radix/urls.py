@@ -12,7 +12,7 @@ urlpatterns = [
     
     # url(r'^partials/', include(partial_patterns, namespace='partials')),
 
-    url(r'^last_data/(?P<typeId>\d+)/(?P<n>\d+)$', views.last_data, name='last_data')
+    url(r'^last_data/(?P<typeId>\d+)/(?P<n>\d+)$', views.last_data, name='last_data'),
     ]
 
 # TODO: Remove after uploading the project. This is only used for development!
